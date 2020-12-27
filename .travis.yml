@@ -15,7 +15,7 @@ after_success:
   - docker build -t sivalka/multi-server ./server
   - docker build -t sivalka/multi-worker ./worker
   #Login to the docker CLI
-  - echo "$DOCKER_PASSWORD" | docker login -u "DOCKER_ID" --password-stdin
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   #push all images to docker hub
   - docker push sivalka/multi-client
   - docker push sivalka/multi-nginx
