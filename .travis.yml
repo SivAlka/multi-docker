@@ -21,7 +21,7 @@ after_success:
   - docker push sivalka/multi-nginx
   - docker push sivalka/multi-server
   - docker push sivalka/multi-worker
-  deploy:
+deploy:
   provider: elasticbeanstalk
   region: 'us-east-1'
   app: 'multi-docker'
